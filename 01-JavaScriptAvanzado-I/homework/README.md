@@ -5,9 +5,13 @@
 
 ### Scope & Hoisting
 
-Determiná que será impreso en la consola, sin ejecutar el código.
+Determina que será impreso en la consola, sin ejecutar el código.
 
-> Investiguen cual es la diferencia entre declarar una variable con `var` y directamente asignarle un valor. => Con las palabras var, let o const estamos declarando las variables, sea de manera global o local, sin importar si les asignamos un valor, vacío null o undefined, mientras que si no utilizamos ninguna de estas palabras simplemente estamos asignando el valor a una variable, pero esto nos puede crear problemas al momento de la ejecución del código.
+> Investiguen cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor. 
+> ≥ Con las palabras var, let o const estamos declarando las variables, sea de manera global o local, 
+> sin importar si les asignamos un valor, vacío null o undefined, mientras que si no utilizamos ninguna de estas palabras, 
+> simplemente estamos asignando el valor a una variable, pero esto nos puede crear problemas al momento de la ejecución
+> del código.
 
 ```javascript
 x = 1;             
@@ -77,7 +81,7 @@ console.log(pm);                        // => 'Franco' (No reasigna su valor al 
 ```
 ### Coerción de Datos
 
-¿Qué crees que van dar estas operaciones?:
+¿Qué crees que van a dar estas operaciones?:
 
 ```javascript
 6 / "3"             // => Castea el string a número y realiza la operación, 2.
@@ -105,7 +109,7 @@ parseInt("09")      // => Convierte el string a número, 9.
 
 ### Hoisting
 
-¿Cuál es el output que vemos en consola luego de ejecutar este código? Explicar porque es así:
+¿Cuál es el output que vemos en consola luego de ejecutar este código? Explicar por qué es así:
 
 ```javascript
 function test() {
@@ -166,7 +170,7 @@ console.log(test());                      // => Devuelve undefined porque el mé
 
 ### Event loop
 
-Considerando el siguiente código, ¿Cuál sería el orden del ouput? ¿Por qué?
+Considerando el siguiente código, ¿Cuál sería el orden del output? ¿Por qué?
 
 ```javascript
 function printing(){
