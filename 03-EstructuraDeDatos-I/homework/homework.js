@@ -1,7 +1,7 @@
 // resolve estos ejercicios usando recursión
 
 function nFactorial(n){
-  // devolvé el factorial de n (n!)
+  // devuelve el factorial de n (n!)
   // ej:
   // el factorial de 3 es 6 (3 * 2 * 1)
 
@@ -35,10 +35,12 @@ function nFactorial(n){
   // // recursión
   // return n * nFactorial(n - 1);
 }
+const result = nFactorial(5);
+console.log(result);
 
 function nFibonacci(n){
   // Secuencia de Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…
-  // Retorna el enésimo numero de la serie
+  // Retorna el enésimo número de la serie
   // nFibonacci(0) // 0  // el elemento 0 es cero
   // nFibonacci(1) // 1 // el elemento 1 es 1
   // nFibonacci(6) // 1 // el elemento 6 es 8
@@ -49,6 +51,9 @@ function nFibonacci(n){
     return(nFibonacci(n - 1) + nFibonacci(n - 2));
   }
 }
+
+const result2 = nFibonacci(6)
+console.log(result2)
 
 // Implementa la clase Queue
 // enqueue:   Agrega un valor a la queue.   Respeta el orden existente.
@@ -79,7 +84,8 @@ function Queue(){
 }
 
 Queue.prototype.enqueue = function(value){
-  this.queue.push(value);
+  console.log(value)
+  return this.queue.push(value);
 }
 
 Queue.prototype.dequeue = function(){
@@ -90,12 +96,15 @@ Queue.prototype.size = function(){
   return this.queue.length;
 }
 
-// console.log(queue.enqueue('Edgar'));
-// console.log(queue.enqueue('Vivi'));
-// console.log(queue.enqueue('Emilia y Miranda'));
-// console.log(queue.dequeue());
-// console.log(queue.size());
+const queue = new Queue()
 
+console.log(queue.enqueue('Edgar'));
+console.log(queue.enqueue('Vivi'));
+console.log(queue.enqueue('Emilia y Miranda'));
+console.log('Result: ', queue)
+console.log(queue.dequeue());
+console.log(queue.size());
+console.log('Result: ', queue)
 
 
 // No modifiquen nada debajo de esta linea

@@ -19,7 +19,7 @@ function sumNat(num, tot = 0) {
      // Algoritmo de Euclides
 
 
-     /*Diseñad un método recursivo que escriba al# evés la cadena que se le 
+     /*Diseñad un método recursivo que escriba al# revés la cadena que se le
 pasa como parámetro, más un índice que se usará para recorrer la 
 cadena.
 Dicho método será de la forma:
@@ -27,15 +27,13 @@ Dicho método será de la forma:
 2 ((¿?
 3 }
 Haced dos versiones del mismo, una en la que el índice vaya 
-incrementándose a cada llamada y otra en la éste que vaya 
+incrementándose a cada llamada y otra en la que vaya
 decrementándose. En los dos casos implementad la función que# lama a 
 la función recursiva diseñada, es decir:
 4 public(void(printReversed(String(text)({
 5 ((printReversed(text,(¿?);
 6 }
 Nota: No vale invertir la cadena y luego escribirla*/
-
-2
 
 function invertirPalabra(str){
  if (str === '') {
