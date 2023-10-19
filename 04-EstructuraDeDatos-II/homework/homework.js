@@ -1,5 +1,5 @@
 // Implementa la clase LinkedList
-// tiene metodos `add`, `remove`, y `search`
+// tiene métodos `add`, `remove`, y `search`
 // add: Agrega un nuevo nodo en el final de la lista
 // Ej:      Head --> null
 // add(1):  Head --> 1 --> null
@@ -13,7 +13,7 @@
 function LinkedList(){
   this._length = 0;
   this.head = null;
-  };
+  }
    
 function Node(value){
   this.value = value;
@@ -24,8 +24,8 @@ function Node(value){
 // Creamos la función ADD del constructor
 
 LinkedList.prototype.add = function(value){
-  var node = new Node(value);
-  var current = this.head;
+  let node = new Node(value);
+  let current = this.head;
 
 // Comprobamos si la lista está vacía
 
@@ -47,17 +47,17 @@ LinkedList.prototype.add = function(value){
 // Creamos la función REMOVE del constructor
 
 LinkedList.prototype.remove = function(){
-  current = this.head;
+  let current = this.head;
 
   if(this._length < 1){
     return null;
-  };
+  }
 
 // Como tengo mi propiedad _length puedo obtener la longitud de la lista
 
   for(let i = 1; i < this._length; i++){ // ---> Es lo mismo que ---> for(let i = 0; i < this._length - 1; i++)   
     current = current.next
-  };
+  }
 
   let value = current.value;
   current.next = null;
@@ -75,7 +75,7 @@ LinkedList.prototype.search = function(value){
 // Comprobamos que la lista no está vacía
 if(this._length < 1){
   return null;
-};
+}
 
 let current = this.head;
 let nodeValue = null;
@@ -110,7 +110,7 @@ else{
 //    - Se pasa ese valor a la función hash(Pista: usar la función charCodeAt), que determina la posición en que debe ir en el arreglo.  
 //    - Luego el elemento se inserta(llamando al método set) en la posición(índice) devuelta.  
 // Para buscar el valor por su key: 
-//    - Sólo habrá que pasarle a la función hash la clave del elemento a buscar y ésta determinará la posición  
+//    - Solo habrá que pasarle a la función hash la clave del elemento a buscar y esta determinará la posición
 //      en que se encuentra. 
 //    - Usar el número obtenido, para buscar(llamando al método get) el contenedor o bucket donde está el valor. 
 //    - Retornar dicho valor.
@@ -180,33 +180,33 @@ function HashTable() {
   this.numBuckets = 35;
   this.memoria = [];
   this.hash = function(key){
-    var sum = 0;
-    for(var i = 0; i < key.length; i++){
+    let sum = 0;
+    for(let i = 0; i < key.length; i++){
       sum = sum + key[i].charCodeAt(0);
     }
     return sum % this.numBuckets;
   }
-};
+}
 
 HashTable.prototype.set = function set(key, value){
   if(typeof key !== 'string'){
     throw new TypeError('Key must be strings');
   }
-  var posicion = this.hash(key);
-  if(this.memoria[posicion] === undefined){
-     this.memoria[posicion] = {};
+  let position = this.hash(key);
+  if(this.memoria[position] === undefined){
+     this.memoria[position] = {};
   }
-     this.memoria[posicion][key] = value;
+     this.memoria[position][key] = value;
 };
 
 HashTable.prototype.get = function get(key){
-  var posicion = this.hash(key);
-  return this.memoria[posicion][key];
+  let position = this.hash(key);
+  return this.memoria[position][key];
 };
 
 HashTable.prototype.hasKey = function hasKey(key){
-  var posicion = this.hash(key);
-  return this.memoria[posicion].hasOwnProperty(key)
+  let position = this.hash(key);
+  return this.memoria[position].hasOwnProperty(key)
 };
 // No modifiquen nada debajo de esta linea
 // ------------------------------------------------
